@@ -1,0 +1,25 @@
+- id: go-fmt
+  name: go fmt
+  entry: go
+  language: golang
+  args: ["fmt"]
+  types: [go]
+- id: go-mod-tidy
+  name: go mod tidy
+  entry: go
+  args: ["mod", "tidy"]
+  pass_filenames: false
+  language: golang
+- id: go-unit-tests
+  name: go unit tests
+  entry: go
+  args: ["test", "./...", "-v"]
+  language: golang
+  types: [go]
+- id: go-build
+  name: go build
+  entry: go
+  args: ["build", "./cmd/..."]
+  language: golang
+  types: [go]
+  pass_filenames: false
